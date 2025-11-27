@@ -3,28 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
+/*   By: icoman <icoman@student.42firenze.it>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 18:46:08 by icoman            #+#    #+#             */
-/*   Updated: 2025/11/26 19:05:21 by icoman           ###   ########.fr       */
+/*   Updated: 2025/11/27 19:53:35 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t i;
-	char *d;
-	d = (char *) s;
-	i = 0;
-	while (i < n)
-		d[i++] = c;
+	unsigned char	*d;
+
+	d = (unsigned char *)s;
+	while (n--)
+		*d++ = (unsigned char)c;
 	return (s);
 }
+
 /*
-int main(int argc, char const *argv[])
+int main()
 {
 	char s1[] = "MEOW";
 	char s2[] = "MEOW";
