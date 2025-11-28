@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42firenze.it>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:30:56 by icoman            #+#    #+#             */
-/*   Updated: 2025/11/27 19:56:36 by icoman           ###   ########.fr       */
+/*   Updated: 2025/11/28 18:39:10 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
+char	*strchr(const char *s, int c);
 char	*strchr(const char *s, int c);
 
 // Funzioni per aree di memoria
