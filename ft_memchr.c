@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: icoman <icoman@student.42firenze.it>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 18:16:40 by icoman            #+#    #+#             */
-/*   Updated: 2025/11/29 19:17:41 by icoman           ###   ########.fr       */
+/*   Created: 2025/11/29 15:19:58 by icoman            #+#    #+#             */
+/*   Updated: 2025/11/29 18:50:35 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned int	i;
+	unsigned char	*str;
 
-	if (n == 0)
-		return (0);
-	i = 0;
-	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n - 1)
-		i++;
-	return (s1[i] - s2[i]);
+	str = (unsigned char *)s;
+	while (n--)
+	{
+		if (*str == (unsigned char)c)
+			return (str);
+		str++;
+	}
+	return (NULL);
 }
-/*
-int main(){
-	char *a = "";
-	char *b = "CIAO";
-	printf("ft version: %d\n", ft_strncmp(a, b, 2));
-	printf("libc version: %d\n", strncmp(a, b, 2));
+
+int main()
+{
+	printf("ft version:   %p\n", ft_memchr("se giri l'angolo rimettilo a posto", 's', 3));
+	printf("libc version: %p\n", memchr("se giri l'angolo rimettilo a posto", 's', 3));
+	return 0;
 }
-*/
