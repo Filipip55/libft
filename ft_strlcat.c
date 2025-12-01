@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42firenze.it>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 17:52:12 by icoman            #+#    #+#             */
-/*   Updated: 2025/11/27 19:52:29 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/01 20:31:35 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t			dest_len;
-	size_t			src_len;
-	unsigned int	i;
+	size_t	dest_len;
+	size_t	src_len;
+	size_t	i;
 
 	dest_len = 0;
 	while (dest[dest_len] && dest_len < size)
