@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42firenze.it>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:06:17 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/01 20:26:52 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/02 21:24:52 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub_s = malloc(len);
 	if (sub_s == NULL)
 		return (NULL);
-	ft_strlcpy(sub_s, s + start, len);
+	ft_strlcpy(sub_s, s + start, len + 1);
 	return (sub_s);
 }
 /*
