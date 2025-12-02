@@ -1,36 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: icoman <icoman@student.42firenze.it>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 17:42:23 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/02 11:19:19 by icoman           ###   ########.fr       */
+/*   Created: 2025/12/02 11:33:05 by icoman            #+#    #+#             */
+/*   Updated: 2025/12/02 11:37:34 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (s[i])
-	{
-		i++;
-	}
-	return (i);
+	while (s1)
 }
-
-/*
-int main()
-{
-	const char *s = "I LOVE TATE MCRAE";
-	printf("ft version \n");
-	printf("%d\n", ft_strlen(s));
-	printf("libc version \n");
-	printf("%d\n", strlen(s));
-}
-*/
