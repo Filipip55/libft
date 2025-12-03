@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: icoman <icoman@student.42firenze.it>       +#+  +:+       +#+        */
+/*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:30:56 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/02 11:33:36 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/03 15:54:14 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int		ft_isprint(int c);
 int		ft_isalnum(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+void    ft_putchar_fd(char c, int fd);
 
 // Funzioni per le stringhe
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -40,6 +41,8 @@ char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strjoin(char const *s1, char const *s2);
+void    ft_putstr_fd(char *s, int fd);
+void    ft_putendl_fd(char *s, int fd);
 
 // Funzioni per aree di memoria
 void	ft_bzero(void *s, size_t n);
@@ -52,4 +55,5 @@ void	*ft_calloc(size_t nmemb, size_t size);
 
 // Funzioni di conversione
 int 	ft_atoi(const char *nptr);
+char    *ft_itoa(int n);
 #endif

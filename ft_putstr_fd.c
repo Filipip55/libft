@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/29 15:19:58 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/03 14:32:44 by icoman           ###   ########.fr       */
+/*   Created: 2025/12/03 15:52:43 by icoman            #+#    #+#             */
+/*   Updated: 2025/12/03 15:55:49 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void ft_putstr_fd(char *s, int fd)
 {
-	unsigned char	*str;
+    size_t	i;
 
-	str = (unsigned char *)s;
-	while (n--)
+	i = 0;
+	while (s[i])
 	{
-		if (*str == (unsigned char)c)
-			return (str);
-		str++;
+		write(fd, &s[i], 1);
+		i++;
 	}
-	return (NULL);
-}
-
-int main()
-{
-	printf("ft version:   %p\n", ft_memchr("se giri l'angolo rimettilo a posto", 's', 3));
-	printf("libc version: %p\n", memchr("se giri l'angolo rimettilo a posto", 's', 3));
-	return 0;
 }
