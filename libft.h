@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:30:56 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/03 15:54:14 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/07 11:54:21 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,10 @@ char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	**ft_split(char const *s, char c);
 void    ft_putstr_fd(char *s, int fd);
 void    ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 // Funzioni per aree di memoria
 void	ft_bzero(void *s, size_t n);

@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 11:33:05 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/03 14:33:20 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/07 11:51:45 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static int	check_set(char const *set, char c)
 /*
 int main()
 {
-	printf("%s\n", ft_strtrim("abcccabToglimi questa roba di dossoccaabba", "abc"));
+	printf("%s\n", ft_strtrim("abcccabToglimi questi caratteri di dossoccaabba", "abc"));
 	return 0;
 }
 */

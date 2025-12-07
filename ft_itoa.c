@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 14:31:47 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/03 15:41:16 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/07 11:39:32 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ char    *ft_itoa(int n)
     }
     s = (char *)malloc(digits);
     ft_putnbr(nbr, s, 0);
+	return (s);
 }
 
 static void	ft_putnbr(long nbr, char *s, int index)
