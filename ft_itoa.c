@@ -6,50 +6,69 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 14:31:47 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/07 11:39:32 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/10 18:53:55 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_putnbr(long nbr, char *s, int index);
+static int get_digits(int n);
+static void fill_str(char *str, long nbr, int len);
 
-char    *ft_itoa(int n)
+char *ft_itoa(int n)
 {
-	size_t  digits;
+    int     len;
+    char    *str;
     long    nbr;
-    char    *s;
 
     nbr = n;
-    digits = 0;
-    while (n > 0)
+    len = get_digits(n);
+    str = (char *)malloc(sizeof(char) * (len + 1));
+    if (!str)
+        return (NULL);
+    fill_str(str, nbr, len);
+    return (str);
+}
+static void fill_str(char *str, long nbr, int len)
+{
+	str[len] = '\0';
+    len--;
+	if (nbr == 0)
+    {
+        str[0] = '0';
+        return ;
+    }
+    if (nbr < 0)
+    {
+        str[0] = '-';
+        nbr = -nbr;
+    }
+    while (nbr > 0)
+    {
+        str[len] = (nbr % 10) + '0';
+        nbr /= 10;
+        len--;
+    }
+}
+
+static int get_digits(int n)
+{
+    int len = 0;
+
+    if (n <= 0)
+        len++;
+    while (n != 0)
     {
         n /= 10;
-        digits++;   
+        len++;
     }
-    s = (char *)malloc(digits);
-    ft_putnbr(nbr, s, 0);
-	return (s);
+    return (len);
 }
 
-static void	ft_putnbr(long nbr, char *s, int index)
-{
-	if (nbr < 0)
-	{
-		s[index] = '-';
-		nbr = nbr * -1;
-		ft_putnbr(nbr, s, index + 1);
-	}
-	else
-	{
-		if (nbr >= 10)
-			ft_putnbr(nbr / 10, s, index + 1);
-		s[index] = nbr % 10 + '0';
-	}
-}
-
+/*
 int main()
 {
     printf("%s\n", ft_itoa(-1234567));
     return (0);
 }
+*/
