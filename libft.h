@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:30:56 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/10 20:46:37 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/12 13:21:02 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ char	**ft_split(char const *s, char c);
 void    ft_putstr_fd(char *s, int fd);
 void    ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 // Funzioni per aree di memoria
 void	ft_bzero(void *s, size_t n);
