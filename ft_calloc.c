@@ -6,23 +6,23 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 19:09:42 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/03 14:32:27 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/12 18:06:39 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//se nmemb o size sono 0 allora restituisce un ptr a un area di memoria unica di 1 byte
+//se nmemb o size sono 0 allora restituisce un 
+//ptr a un area di memoria unica di 1 byte
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*ptr;
 	unsigned int	total_size;
 
 	if (nmemb == 0 || size == 0)
-        total_size = 1;
+		total_size = 1;
 	else
 		total_size = nmemb * size;
-		
 	ptr = malloc(total_size);
 	if (ptr == NULL)
 		return (NULL);

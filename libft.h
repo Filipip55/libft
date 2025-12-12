@@ -6,11 +6,10 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:30:56 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/12 13:21:02 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/12 18:39:10 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//RIMUOVI STDIO E STRING AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 #ifndef LIBFT_H
 #	define LIBFT_H
 

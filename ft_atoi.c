@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 20:29:21 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/03 14:37:40 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/12 18:05:51 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	ft_atoi(const char *nptr)
 {
 	size_t	i;
-	int	segno;
-	int	res;
+	int		segno;
+	int		res;
 
 	i = 0;
 	segno = 1;

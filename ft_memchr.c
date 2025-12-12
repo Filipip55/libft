@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 15:19:58 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/03 14:32:44 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/12 18:08:57 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
+/*
 int main()
 {
-	printf("ft version:   %p\n", ft_memchr("se giri l'angolo rimettilo a posto", 's', 3));
-	printf("libc version: %p\n", memchr("se giri l'angolo rimettilo a posto", 's', 3));
+	char a[120] = "se giri l'angolo rimettilo a posto"
+	printf("ft version:   %p\n", ft_memchr(a, 's', 3));
+	printf("libc version: %p\n", memchr(a, 's', 3));
 	return 0;
 }
+*/
