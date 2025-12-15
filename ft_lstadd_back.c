@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 13:30:56 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/13 13:55:58 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/15 11:21:12 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,29 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list last;
+	t_list *last;
 	if (lst == NULL || new == NULL)
 		return ;
-	last = ft_lstlast(lst);
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+	last = ft_lstlast(*lst);
+	last->next = new;
 }
+/*
+int main()
+{
+	t_list *testa = NULL;
+	ft_lstadd_back(&testa, ft_lstnew("Nodo 1"));
+	ft_lstadd_back(&testa, ft_lstnew("Nodo 2"));
+	t_list *nodo_tmp = testa;
+	while (nodo_tmp != NULL)
+	{
+		printf("%s\n", (char *)nodo_tmp->content);
+		nodo_tmp = nodo_tmp->next;
+	}
+	return (0);
+}
+*/
