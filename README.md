@@ -91,7 +91,7 @@ make
 
 This will generate the `libft.a` static library file.
 
-Include libft.h in your .c files and link the libft.a file to your .c files when compilating them
+Include `libft.h` at the start your .c files and link the libft.a file to your .c files when compilating them.
 
 ## Commands
 
