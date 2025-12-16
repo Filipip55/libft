@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/07 11:53:43 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/09 19:27:07 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/16 16:39:48 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	**ft_split(char const *s, char c)
 	return (res);
 }
 
-static void		init_vars(size_t *i, size_t *j, int *start)
+static void	init_vars(size_t *i, size_t *j, int *start)
 {
 	*i = 0;
 	*j = 0;
@@ -83,7 +83,7 @@ static void	free_matrix(char **arr, size_t i)
 	free(arr);
 }
 
-static size_t count_words(char const *s, char c)
+static size_t	count_words(char const *s, char c)
 {
 	size_t	i;
 	size_t	new_word;

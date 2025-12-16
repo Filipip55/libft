@@ -6,13 +6,13 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 19:54:32 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/03 14:32:56 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/16 16:33:13 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
@@ -24,13 +24,18 @@ char *ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
+
 /*
 int main()
 {
-	printf("ft version:   %s\n", ft_strchr("se giri l'angolo rimettilo a posto", 'g'));
-	printf("ft version:   %s\n", ft_strchr("se giri l'angolo ri\0mettilo a posto", '\0'));
-	printf("libc version: %s\n", strchr("se giri l'angolo rimettilo a posto", 'g'));
-	printf("libc version: %s\n", strchr("se giri l'angolo ri\0mettilo a posto", '\0'));
+	char *s = ft_strchr("se giri l'angolo rimettilo a posto", 'g');
+	printf("ft version: %s\n", s);
+	s = ft_strchr("se giri l'angolo rimettilo a posto", '\0');
+	printf("ft version: %s\n", s);
+	s = strchr("se giri l'angolo rimettilo a posto", 'g');
+	printf("libc version: %s\n", s);
+	s = strchr("se giri l'angolo rimettilo a posto", '\0');
+	printf("libc version: %s\n", s);
 	return 0;
 }
 */

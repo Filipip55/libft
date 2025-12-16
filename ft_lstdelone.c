@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:20:42 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/16 12:06:11 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/16 16:41:36 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-    if (lst == NULL || del == NULL)
+	if (lst == NULL || del == NULL)
 		return ;
 	del(lst->content);
 	free(lst);

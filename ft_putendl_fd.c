@@ -6,15 +6,15 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 15:54:50 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/12 18:57:27 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/16 16:36:18 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    size_t  i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
@@ -22,5 +22,5 @@ void    ft_putendl_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
-    write(fd, "\n", 1);
+	write(fd, "\n", 1);
 }

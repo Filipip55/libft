@@ -6,23 +6,23 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:30:56 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/16 12:43:58 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/16 16:43:32 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#	define LIBFT_H
+# define LIBFT_H
 
-#	include <stdlib.h>
-#	include <stdio.h>
-#	include <string.h>
-#	include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <string.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
-	void *content;
-	struct s_list *next;
-} t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 // Funzioni per i caratteri
 int		ft_isalpha(int c);

@@ -6,15 +6,15 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 15:52:43 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/03 15:55:49 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/16 16:35:22 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    size_t	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])

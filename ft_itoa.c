@@ -6,69 +6,71 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 14:31:47 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/10 18:53:55 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/16 16:38:52 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int get_digits(int n);
-static void fill_str(char *str, long nbr, int len);
+static int	get_digits(int n);
+static void	fill_str(char *str, long nbr, int len);
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    int     len;
-    char    *str;
-    long    nbr;
+	int		len;
+	char	*str;
+	long	nbr;
 
-    nbr = n;
-    len = get_digits(n);
-    str = (char *)malloc(sizeof(char) * (len + 1));
-    if (!str)
-        return (NULL);
-    fill_str(str, nbr, len);
-    return (str);
+	nbr = n;
+	len = get_digits(n);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	fill_str(str, nbr, len);
+	return (str);
 }
-static void fill_str(char *str, long nbr, int len)
+
+static void	fill_str(char *str, long nbr, int len)
 {
 	str[len] = '\0';
-    len--;
+	len--;
 	if (nbr == 0)
-    {
-        str[0] = '0';
-        return ;
-    }
-    if (nbr < 0)
-    {
-        str[0] = '-';
-        nbr = -nbr;
-    }
-    while (nbr > 0)
-    {
-        str[len] = (nbr % 10) + '0';
-        nbr /= 10;
-        len--;
-    }
+	{
+		str[0] = '0';
+		return ;
+	}
+	if (nbr < 0)
+	{
+		str[0] = '-';
+		nbr = -nbr;
+	}
+	while (nbr > 0)
+	{
+		str[len] = (nbr % 10) + '0';
+		nbr /= 10;
+		len--;
+	}
 }
 
-static int get_digits(int n)
+static int	get_digits(int n)
 {
-    int len = 0;
+	int	len;
 
-    if (n <= 0)
-        len++;
-    while (n != 0)
-    {
-        n /= 10;
-        len++;
-    }
-    return (len);
+	len = 0;
+	if (n <= 0)
+		len++;
+	while (n != 0)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
 }
 
 /*
 int main()
 {
-    printf("%s\n", ft_itoa(-1234567));
-    return (0);
+	printf("%s\n", ft_itoa(-1234567));
+	return (0);
 }
 */

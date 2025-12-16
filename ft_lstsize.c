@@ -6,13 +6,13 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 13:06:27 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/16 12:38:16 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/16 16:41:55 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int		count;
 

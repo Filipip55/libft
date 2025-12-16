@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 14:44:47 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/03 14:33:18 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/16 16:34:10 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,14 @@ char	*ft_strrchr(const char *s, int c)
 /*
 int main()
 {
-	printf("ft version:   %s\n", ft_strrchr("se giri l'angolo rimettilo a posto", 's'));
-	printf("ft version:   %s\n", ft_strrchr("se giri l'angolo ri\0mettilo a posto", '\0'));
-	printf("libc version: %s\n", strrchr("se giri l'angolo rimettilo a posto", 's'));
-	printf("libc version: %s\n", strrchr("se giri l'angolo ri\0mettilo a posto", '\0'));
+	char *s = ft_strrchr("se giri l'angolo rimettilo a posto", 's');
+	printf("ft version: %s\n", s);
+	s = ft_strrchr("se giri l'angolo rimettilo a posto", '\0');
+	printf("ft version: %s\n", s);
+	s = strrchr("se giri l'angolo rimettilo a posto", 's');
+	printf("libc version: %s\n", s);
+	s = strrchr("se giri l'angolo rimettilo a posto", '\0');
+	printf("libc version: %s\n", s);
 	return 0;
 }
 */

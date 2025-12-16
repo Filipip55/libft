@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 13:30:56 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/15 11:21:12 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/16 16:41:15 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *last;
+	t_list	*last;
+
 	if (lst == NULL || new == NULL)
 		return ;
 	if (*lst == NULL)
