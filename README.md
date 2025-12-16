@@ -91,6 +91,8 @@ make
 
 This will generate the `libft.a` static library file.
 
+Include libft.h in your .c files and link the libft.a file to your .c files when compilating them
+
 ## Commands
 
 - `make`: Compiles the mandatory functions and creates `libft.a`
@@ -102,4 +104,4 @@ This will generate the `libft.a` static library file.
 
 - **Man pages**: The primary source of truth for standard functions
 - **GeeksforGeeks**: [Linked List in C](https://www.geeksforgeeks.org/c/linked-list-in-c/)
-- **AI**: Used mostly for test case suggestions (edge cases) and for explaining logic and concepts when I was bedridden for a week
+- **AI**: Used mostly for test case suggestions (edge cases), for explaining logic and concepts when I was bedridden for a week and for formatting this md file
