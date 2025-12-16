@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:06:17 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/03 14:33:24 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/16 17:03:16 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (s == NULL)
 		return (NULL);
-	if (start > ft_strlen(s))
+	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	if (len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
