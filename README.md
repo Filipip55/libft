@@ -80,24 +80,26 @@ Functions to manipulate lists (`t_list` struct).
 * `gcc` compiler
 * `make` (GNU Make)
 
-### Installation
+## Installation
+
 To compile the library, clone the repository and run the Makefile:
 
+```bash
 cd libft
 make
+```
 
-This will generate the libft.a static library file.
-Commands
+This will generate the `libft.a` static library file.
 
-    make : Compiles the mandatory functions and creates libft.a.
+## Commands
 
-    make clean : Removes object files (.o).
+- `make`: Compiles the mandatory functions and creates `libft.a`
+- `make clean`: Removes object files (`.o`)
+- `make fclean`: Removes object files and the `libft.a` binary
+- `make re`: Performs a full rebuild (`fclean` + `make`)
 
-    make fclean : Removes object files and the libft.a binary.
+## Resources
 
-    make re : Performs a full rebuild (fclean + make).
-
-### Resources
-Man pages: The primary source of truth for standard functions
-Geeks for geeks: https://www.geeksforgeeks.org/c/linked-list-in-c/
-AI was used mostly for test case suggestions (edge cases) and for explainig logic and concepts when i was bedridden for a week
+- **Man pages**: The primary source of truth for standard functions
+- **GeeksforGeeks**: [Linked List in C](https://www.geeksforgeeks.org/c/linked-list-in-c/)
+- **AI**: Used mostly for test case suggestions (edge cases) and for explaining logic and concepts when I was bedridden for a week
