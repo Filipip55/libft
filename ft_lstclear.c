@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/15 11:20:42 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/16 12:06:11 by icoman           ###   ########.fr       */
+/*   Created: 2025/12/16 12:07:27 by icoman            #+#    #+#             */
+/*   Updated: 2025/12/16 12:22:04 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-    if (lst == NULL || del == NULL)
+	t_list	*current;
+	t_list	*next;
+
+	if (lst == NULL || *lst == NULL || del == NULL )
 		return ;
-	del(lst->content);
-	free(lst);
+	current = *lst;
+	while (current != NULL)
+	{
+		next = current->next;
+		ft_lstdelone(current, del);
+		current = next;
+	}
+	*lst = NULL;
 }
 /*
 void del_content(void *content)
@@ -30,15 +39,8 @@ int main()
 	t_list *nodo = ft_lstnew(ft_strdup("Ciao"));
 	ft_lstadd_back(&nodo, ft_lstnew(ft_strdup("Nodo 1")));
 	ft_lstadd_back(&nodo, ft_lstnew(ft_strdup("Nodo 2")));
-	t_list *secondo = nodo->next;
-	ft_lstdelone(ft_lstlast(nodo), del_content);
-	secondo->next = NULL;
-	t_list *nodo_tmp = nodo;
-	while (nodo_tmp != NULL)
-	{
-		printf("%s\n", (char *)nodo_tmp->content);
-		nodo_tmp = nodo_tmp->next;
-	}
+	ft_lstclear(&nodo, del_content);
+	printf("%d\n", ft_lstsize(nodo));
 	return (0);
 }
 */

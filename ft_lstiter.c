@@ -1,38 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/15 11:20:42 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/16 12:06:11 by icoman           ###   ########.fr       */
+/*   Created: 2025/12/16 12:24:18 by icoman            #+#    #+#             */
+/*   Updated: 2025/12/16 12:37:09 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    if (lst == NULL || del == NULL)
+	if (lst == NULL || f == NULL )
 		return ;
-	del(lst->content);
-	free(lst);
+	while (lst != NULL)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }
 /*
-void del_content(void *content)
+void replace_char_a(void *content)
 {
-    free(content);
+	char *s = (char *)content;
+    while (*s)
+	{
+		if (*s == 'a')
+		*s = '7';
+		s++;
+	}
 }
 
 int main()
 {
 	t_list *nodo = ft_lstnew(ft_strdup("Ciao"));
-	ft_lstadd_back(&nodo, ft_lstnew(ft_strdup("Nodo 1")));
-	ft_lstadd_back(&nodo, ft_lstnew(ft_strdup("Nodo 2")));
-	t_list *secondo = nodo->next;
-	ft_lstdelone(ft_lstlast(nodo), del_content);
-	secondo->next = NULL;
+	ft_lstadd_back(&nodo, ft_lstnew(ft_strdup("Miao")));
+	ft_lstadd_back(&nodo, ft_lstnew(ft_strdup("Bauu")));
+	ft_lstiter(nodo, replace_char_a);
 	t_list *nodo_tmp = nodo;
 	while (nodo_tmp != NULL)
 	{

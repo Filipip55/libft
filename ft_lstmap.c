@@ -1,39 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/13 13:06:27 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/16 12:38:16 by icoman           ###   ########.fr       */
+/*   Created: 2025/12/16 12:44:13 by icoman            #+#    #+#             */
+/*   Updated: 2025/12/16 12:44:29 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int		count;
-
-	count = 0;
-	while (lst != NULL)
-	{
-		lst = lst->next;
-		count++;
-	}
-	return (count);
+	
 }
-
-/*
-int main()
-{
-	t_list *testa = ft_lstnew("Nodo 0");
-	ft_lstadd_front(&testa, ft_lstnew("Nodo 1"));
-	ft_lstadd_front(&testa, ft_lstnew("Nodo 2"));
-	ft_lstadd_front(&testa, ft_lstnew("Nodo 3"));
-	ft_lstadd_front(&testa, ft_lstnew("Nodo 4"));
-	printf("%d\n", ft_lstsize(testa));
-	return (0);
-}
-*/
