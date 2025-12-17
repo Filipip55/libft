@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 17:52:12 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/03 14:33:05 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/17 19:12:28 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main(){
 	char c[] = "balco";
 	char d[4] = "nee";
 	printf("ft version\n%ld\n", ft_strlcat(a, b, 4));
-	printf("%s\n%s", a, b);
+	printf("%s\n%s\n", a, b);
 	printf("libc version\n%ld\n", strlcat(c, d, 4));
 	printf("%s\n%s", c, d);
 }
