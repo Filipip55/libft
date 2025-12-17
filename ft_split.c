@@ -6,14 +6,14 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/07 11:53:43 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/16 16:39:48 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/17 16:41:09 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static size_t	count_words(char const *s, char c);
-static void		free_matrix(char **arr, size_t i);
+static void		free_all(char **arr, size_t i);
 static char		*fill_word(const char *s, size_t start, size_t end);
 static void		init_vars(size_t *i, size_t *j, int *start);
 
@@ -25,7 +25,7 @@ char	**ft_split(char const *s, char c)
 	int		start;
 
 	res = malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (!res || !s)
+	if (res == NULL || s == NULL)
 		return (NULL);
 	init_vars(&i, &j, &start);
 	while (s[i])
@@ -36,8 +36,8 @@ char	**ft_split(char const *s, char c)
 			while (s[i] && s[i] != c)
 				i++;
 			res[j++] = fill_word(s, start, i);
-			if (!res[j - 1])
-				return (free_matrix(res, j - 1), NULL);
+			if (res[j - 1] == NULL)
+				return (free_all(res, j - 1), NULL);
 		}
 		else
 			i++;
@@ -72,8 +72,8 @@ static char	*fill_word(const char *s, size_t start, size_t end)
 	return (word);
 }
 
-/* Helper per liberare tutto in caso di errore */
-static void	free_matrix(char **arr, size_t i)
+//per liberare tutto in caso di errore
+static void	free_all(char **arr, size_t i)
 {
 	while (i > 0)
 	{

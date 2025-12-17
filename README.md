@@ -19,7 +19,7 @@ My implementation of standard C library functions.
 | `ft_isalpha` | Checks for an alphabetic character. |
 | `ft_isdigit` | Checks for a digit (0 through 9). |
 | `ft_isalnum` | Checks for an alphanumeric character. |
-| `ft_isascii` | Checks whether c fits into the ASCII character set. |
+| `ft_isascii` | Checks whether the passed char fits into the ASCII character set. |
 | `ft_isprint` | Checks for any printable character. |
 | `ft_strlen` | Calculates the length of a string. |
 | `ft_memset` | Fills memory with a constant byte. |
@@ -46,7 +46,7 @@ Functions that are not part of the standard libc but are useful.
 | Function | Description |
 | :--- | :--- |
 | `ft_substr` | Returns a substring from a string. |
-| `ft_strjoin` | Concatenates two strings. |
+| `ft_strjoin` | Concatenates two strings creating a new string. |
 | `ft_strtrim` | Trims the beginning and end of string with specific set of chars. |
 | `ft_split` | Splits a string using a char as parameter. |
 | `ft_itoa` | Converts a number into a string. |

@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 14:31:47 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/16 16:38:52 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/17 16:46:03 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_itoa(int n)
 	nbr = n;
 	len = get_digits(n);
 	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (!str)
+	if (str == NULL)
 		return (NULL);
 	fill_str(str, nbr, len);
 	return (str);

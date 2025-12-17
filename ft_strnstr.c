@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 19:54:29 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/03 14:33:15 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/17 16:22:25 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (!*little)
+	if (*little == NULL)
 		return ((char *)big);
 	i = 0;
 	while (big[i] && i < len)

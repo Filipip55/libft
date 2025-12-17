@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 13:06:10 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/12 13:23:41 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/17 16:47:44 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*str;
 
-	if (!s || !f)
+	if (s  == NULL || f == NULL)
 		return (NULL);
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (!str)
+	str = (char *)malloc(ft_strlen(s) + 1);
+	if (str = NULL)
 		return (NULL);
 	i = 0;
 	while (s[i])

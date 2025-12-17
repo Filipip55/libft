@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 13:21:21 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/12 13:39:14 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/17 16:48:24 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
-	if (!s || !f)
+	if (s == NULL || f == NULL)
 		return ;
 	i = 0;
 	while (s[i])
