@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 18:43:17 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/03 14:32:59 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/17 21:15:30 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strdup(const char *s)
 	len = 0;
 	while (s[len])
 		len++;
-	new_s = (char *)malloc(len);
+	new_s = (char *)malloc(len + 1);
 	if (new_s == NULL)
 		return (NULL);
 	new_s[len] = '\0';

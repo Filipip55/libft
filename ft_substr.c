@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:06:17 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/16 17:03:16 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/17 21:32:32 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(sub_s, s + start, len + 1);
 	return (sub_s);
 }
-/*
-int main()
+
+/* int main()
 {
-	printf("%s\n", ft_substr("Jigsaw falling into place!", 3, 2344));
+	printf("%s\n", ft_substr("lorem ipsum dolor sit amet", 7, 10));
 	return 0;
-}
-*/
+} */
