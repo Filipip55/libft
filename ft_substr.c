@@ -6,7 +6,7 @@
 /*   By: icoman <icoman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:06:17 by icoman            #+#    #+#             */
-/*   Updated: 2025/12/17 21:32:32 by icoman           ###   ########.fr       */
+/*   Updated: 2025/12/18 15:52:28 by icoman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
-	sub_s = malloc(len);
+	sub_s = malloc(len + 1);
 	if (sub_s == NULL)
 		return (NULL);
 	ft_strlcpy(sub_s, s + start, len + 1);
@@ -33,4 +33,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	printf("%s\n", ft_substr("lorem ipsum dolor sit amet", 7, 10));
 	return 0;
-} */
+}  */
